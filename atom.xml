@@ -4,7 +4,7 @@
   <title><![CDATA[Esmerino Costa]]></title>
   <link href="http://esmerino.github.com/atom.xml" rel="self"/>
   <link href="http://esmerino.github.com/"/>
-  <updated>2012-12-11T11:20:26-02:00</updated>
+  <updated>2012-12-14T15:45:50-02:00</updated>
   <id>http://esmerino.github.com/</id>
   <author>
     <name><![CDATA[Esmerino]]></name>
@@ -12,5 +12,186 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Koan#Asserts]]></title>
+    <link href="http://esmerino.github.com/blog/2012/12/14/koan-sobre-asserts/"/>
+    <updated>2012-12-14T15:16:00-02:00</updated>
+    <id>http://esmerino.github.com/blog/2012/12/14/koan-sobre-asserts</id>
+    <content type="html"><![CDATA[<p>Sem sobre de dúvida que a melhor forma de analisar/interpretar um código é testando-os, sendo assim, vou fazer alguns posts sobre o <a href="http://rubykoans.com/"><code>Ruby Koans</code></a>.</p>
+
+<h1>Koan sobre asserts</h1>
+
+<h1>Code Red</h1>
+
+<figure class='code'><figcaption><span> </span><a href='https://github.com/esmerino/ruby_koans/blob/master/src/about_asserts.rb'>Source code</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class='line'><span class="c1"># -*- ruby -*-</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">require</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/edgecase&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">AboutAsserts</span> <span class="o">&lt;</span> <span class="no">EdgeCase</span><span class="o">::</span><span class="no">Koan</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># We shall contemplate truth by testing reality, via asserts.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_assert_truth</span>
+</span><span class='line'>    <span class="n">assert</span> <span class="kp">false</span>                <span class="c1"># This should be true</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Enlightenment may be more easily achieved with appropriate</span>
+</span><span class='line'>  <span class="c1"># messages.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_assert_with_message</span>
+</span><span class='line'>    <span class="n">assert</span> <span class="kp">false</span><span class="p">,</span> <span class="s2">&quot;This should be true -- Please fix this&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># To understand reality, we must compare our expectations against</span>
+</span><span class='line'>  <span class="c1"># reality.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_assert_equality</span>
+</span><span class='line'>    <span class="n">expected_value</span> <span class="o">=</span> <span class="n">__</span>
+</span><span class='line'>    <span class="n">actual_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert</span> <span class="n">expected_value</span> <span class="o">==</span> <span class="n">actual_value</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Some ways of asserting equality are better than others.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_a_better_way_of_asserting_equality</span>
+</span><span class='line'>    <span class="n">expected_value</span> <span class="o">=</span> <span class="n">__</span>
+</span><span class='line'>    <span class="n">actual_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">actual_value</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Sometimes we will ask you to fill in the values</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_fill_in_values</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Code Green</h1>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#!/usr/bin/env ruby</span>
+</span><span class='line'><span class="c1"># -*- ruby -*-</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">require</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/edgecase&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">AboutAsserts</span> <span class="o">&lt;</span> <span class="no">EdgeCase</span><span class="o">::</span><span class="no">Koan</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># We shall contemplate truth by testing reality, via asserts.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_assert_truth</span>
+</span><span class='line'>    <span class="n">assert</span> <span class="kp">true</span>                <span class="c1"># This should be true</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Enlightenment may be more easily achieved with appropriate</span>
+</span><span class='line'>  <span class="c1"># messages.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_assert_with_message</span>
+</span><span class='line'>    <span class="n">assert</span> <span class="kp">true</span><span class="p">,</span> <span class="s2">&quot;This should be true -- Please fix this&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># To understand reality, we must compare our expectations against</span>
+</span><span class='line'>  <span class="c1"># reality.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_assert_equality</span>
+</span><span class='line'>    <span class="n">expected_value</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'>    <span class="n">actual_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert</span> <span class="n">expected_value</span> <span class="o">==</span> <span class="n">actual_value</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Some ways of asserting equality are better than others.</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_a_better_way_of_asserting_equality</span>
+</span><span class='line'>    <span class="n">expected_value</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'>    <span class="n">actual_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">actual_value</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Sometimes we will ask you to fill in the values</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_fill_in_values</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
 </feed>
