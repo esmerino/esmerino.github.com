@@ -4,7 +4,7 @@
   <title><![CDATA[Esmerino Costa]]></title>
   <link href="http://esmerino.github.com/atom.xml" rel="self"/>
   <link href="http://esmerino.github.com/"/>
-  <updated>2012-12-14T15:45:50-02:00</updated>
+  <updated>2012-12-14T15:58:13-02:00</updated>
   <id>http://esmerino.github.com/</id>
   <author>
     <name><![CDATA[Esmerino]]></name>
@@ -12,6 +12,175 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Koan#Nil]]></title>
+    <link href="http://esmerino.github.com/blog/2012/12/14/koan-number-nil/"/>
+    <updated>2012-12-14T15:51:00-02:00</updated>
+    <id>http://esmerino.github.com/blog/2012/12/14/koan-number-nil</id>
+    <content type="html"><![CDATA[<h1>Code Red</h1>
+
+<figure class='code'><figcaption><span> </span><a href='https://github.com/esmerino/ruby_koans/blob/master/src/about_nil.rb'>Source code</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/edgecase&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">AboutNil</span> <span class="o">&lt;</span> <span class="no">EdgeCase</span><span class="o">::</span><span class="no">Koan</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_nil_is_an_object</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Object</span><span class="p">),</span> <span class="s2">&quot;Unlike NULL in other languages&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_you_dont_get_null_pointer_errors_when_calling_methods_on_nil</span>
+</span><span class='line'>    <span class="c1"># What happens when you call a method that doesn&#39;t exist.  The</span>
+</span><span class='line'>    <span class="c1"># following begin/rescue/end code block captures the exception and</span>
+</span><span class='line'>    <span class="c1"># makes some assertions about it.</span>
+</span><span class='line'>    <span class="k">begin</span>
+</span><span class='line'>      <span class="kp">nil</span><span class="o">.</span><span class="n">some_method_nil_doesnt_know_about</span>
+</span><span class='line'>    <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">ex</span>
+</span><span class='line'>      <span class="c1"># What exception has been caught?</span>
+</span><span class='line'>      <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">class</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1"># What message was attached to the exception?</span>
+</span><span class='line'>      <span class="c1"># (HINT: replace __ with part of the error message.)</span>
+</span><span class='line'>      <span class="n">assert_match</span><span class="p">(</span><span class="sr">/__/</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_nil_has_a_few_methods_defined_on_it</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">nil?</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">to_s</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">inspect</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># THINK ABOUT IT:</span>
+</span><span class='line'>    <span class="c1">#</span>
+</span><span class='line'>    <span class="c1"># Is it better to use</span>
+</span><span class='line'>    <span class="c1">#    obj.nil?</span>
+</span><span class='line'>    <span class="c1"># or</span>
+</span><span class='line'>    <span class="c1">#    obj == nil</span>
+</span><span class='line'>    <span class="c1"># Why?</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Code Green</h1>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/edgecase&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">AboutNil</span> <span class="o">&lt;</span> <span class="no">EdgeCase</span><span class="o">::</span><span class="no">Koan</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_nil_is_an_object</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="kp">true</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Object</span><span class="p">),</span> <span class="s2">&quot;Unlike NULL in other languages&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_you_dont_get_null_pointer_errors_when_calling_methods_on_nil</span>
+</span><span class='line'>    <span class="c1"># What happens when you call a method that doesn&#39;t exist.  The</span>
+</span><span class='line'>    <span class="c1"># following begin/rescue/end code block captures the exception and</span>
+</span><span class='line'>    <span class="c1"># makes some assertions about it.</span>
+</span><span class='line'>    <span class="k">begin</span>
+</span><span class='line'>      <span class="kp">nil</span><span class="o">.</span><span class="n">some_method_nil_doesnt_know_about</span>
+</span><span class='line'>    <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">ex</span>
+</span><span class='line'>      <span class="c1"># What exception has been caught?</span>
+</span><span class='line'>      <span class="n">assert_equal</span> <span class="no">NoMethodError</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">class</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1"># What message was attached to the exception?</span>
+</span><span class='line'>      <span class="c1"># (HINT: replace __ with part of the error message.)</span>
+</span><span class='line'>      <span class="n">assert_match</span><span class="p">(</span><span class="sr">/some_method_nil_doesnt_know_about/</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_nil_has_a_few_methods_defined_on_it</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="kp">true</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">nil?</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">to_s</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="s2">&quot;nil&quot;</span><span class="p">,</span> <span class="kp">nil</span><span class="o">.</span><span class="n">inspect</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># THINK ABOUT IT:</span>
+</span><span class='line'>    <span class="c1">#</span>
+</span><span class='line'>    <span class="c1"># Is it better to use</span>
+</span><span class='line'>    <span class="c1">#    obj.nil?</span>
+</span><span class='line'>    <span class="c1"># or</span>
+</span><span class='line'>    <span class="c1">#    obj == nil</span>
+</span><span class='line'>    <span class="c1"># Why?</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Koan#Asserts]]></title>
