@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Koan_about_array - Esmerino Costa</title>
+	<title>Koan#Array - Esmerino Costa</title>
 	<meta name="author" content="Esmerino">
 
 	
@@ -88,7 +88,7 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post">
-	<h1 class="title">Koan_about_array</h1>
+	<h1 class="title">Koan#Array</h1>
 	<div class="entry-content"><h1>Code Red</h1>
 
 <p>The Master says:
@@ -184,82 +184,82 @@
 </span><span class='line'><span class="k">class</span> <span class="nc">AboutArrays</span> <span class="o">&lt;</span> <span class="no">EdgeCase</span><span class="o">::</span><span class="no">Koan</span>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_creating_arrays</span>
 </span><span class='line'>    <span class="n">empty_array</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="nb">Array</span><span class="p">),</span> <span class="n">empty_array</span><span class="o">.</span><span class="n">class</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">empty_array</span><span class="o">.</span><span class="n">size</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="nb">Array</span><span class="p">,</span> <span class="n">empty_array</span><span class="o">.</span><span class="n">class</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="mi">0</span><span class="p">,</span> <span class="n">empty_array</span><span class="o">.</span><span class="n">size</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_array_literals</span>
 </span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[]</span><span class="p">,</span> <span class="n">array</span> <span class="c1"># __</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[]</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>     <span class="c1"># __</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">__</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">array</span> <span class="o">&lt;&lt;</span> <span class="mi">333</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">333</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">333</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_accessing_array_elements</span>
 </span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="p">,</span> <span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:peanut</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:peanut</span><span class="p">),</span> <span class="n">array</span><span class="o">.</span><span class="n">first</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:jelly</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:jelly</span><span class="p">),</span> <span class="n">array</span><span class="o">.</span><span class="n">last</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:jelly</span><span class="p">),</span> <span class="n">array</span><span class="o">[-</span><span class="mi">1</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:butter</span><span class="p">),</span> <span class="n">array</span><span class="o">[-</span><span class="mi">3</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:peanut</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:peanut</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">first</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:jelly</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:jelly</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">last</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:jelly</span><span class="p">,</span> <span class="n">array</span><span class="o">[-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:butter</span><span class="p">,</span> <span class="n">array</span><span class="o">[-</span><span class="mi">3</span><span class="o">]</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_slicing_arrays</span>
 </span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="p">,</span> <span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:peanut</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="kp">nil</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span><span class="ss">:butter</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:and</span><span class="p">,</span><span class="ss">:jelly</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:and</span><span class="p">,</span><span class="ss">:jelly</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="o">]</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_arrays_and_ranges</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="no">Range</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">class</span>
-</span><span class='line'>    <span class="n">assert_not_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># __</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="no">Range</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">class</span>
+</span><span class='line'>    <span class="n">assert_not_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_slicing_with_ranges</span>
 </span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="p">,</span> <span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="p">,</span> <span class="ss">:and</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">2</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">2</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span><span class="ss">:butter</span><span class="p">,</span><span class="ss">:and</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span><span class="ss">:butter</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:and</span><span class="p">,</span><span class="ss">:jelly</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_pushing_and_popping_arrays</span>
 </span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
 </span><span class='line'>    <span class="n">array</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="ss">:last</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="ss">:last</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="ss">:last</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">popped_value</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">pop</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:last</span><span class="p">),</span> <span class="n">popped_value</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="n">popped_value</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">test_shifting_arrays</span>
 </span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
 </span><span class='line'>    <span class="n">array</span><span class="o">.</span><span class="n">unshift</span><span class="p">(</span><span class="ss">:first</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:first</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">shifted_value</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">shift</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:first</span><span class="p">),</span> <span class="n">shifted_value</span>
-</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="n">shifted_value</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">,</span> <span class="n">array</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">end</span>
@@ -268,8 +268,176 @@
 
 <h1>Code Green</h1>
 
-<p><code>ruby
-</code></p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/edgecase&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">AboutArrays</span> <span class="o">&lt;</span> <span class="no">EdgeCase</span><span class="o">::</span><span class="no">Koan</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_creating_arrays</span>
+</span><span class='line'>    <span class="n">empty_array</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="nb">Array</span><span class="p">,</span> <span class="n">empty_array</span><span class="o">.</span><span class="n">class</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="mi">0</span><span class="p">,</span> <span class="n">empty_array</span><span class="o">.</span><span class="n">size</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_array_literals</span>
+</span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[]</span><span class="p">,</span> <span class="n">array</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">array</span> <span class="o">&lt;&lt;</span> <span class="mi">333</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">333</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_accessing_array_elements</span>
+</span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="p">,</span> <span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:peanut</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:peanut</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">first</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:jelly</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:jelly</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">last</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:jelly</span><span class="p">,</span> <span class="n">array</span><span class="o">[-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="ss">:butter</span><span class="p">,</span> <span class="n">array</span><span class="o">[-</span><span class="mi">3</span><span class="o">]</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_slicing_arrays</span>
+</span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="p">,</span> <span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span><span class="ss">:butter</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:and</span><span class="p">,</span><span class="ss">:jelly</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:and</span><span class="p">,</span><span class="ss">:jelly</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_arrays_and_ranges</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="no">Range</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">class</span>
+</span><span class='line'>    <span class="n">assert_not_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_slicing_with_ranges</span>
+</span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span> <span class="ss">:butter</span><span class="p">,</span> <span class="ss">:and</span><span class="p">,</span> <span class="ss">:jelly</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span><span class="ss">:butter</span><span class="p">,</span><span class="ss">:and</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:peanut</span><span class="p">,</span><span class="ss">:butter</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="ss">:and</span><span class="p">,</span><span class="ss">:jelly</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_pushing_and_popping_arrays</span>
+</span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">array</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="ss">:last</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="ss">:last</span><span class="o">]</span><span class="p">,</span> <span class="n">array</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">popped_value</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">pop</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:last</span><span class="p">),</span> <span class="n">popped_value</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">test_shifting_arrays</span>
+</span><span class='line'>    <span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">array</span><span class="o">.</span><span class="n">unshift</span><span class="p">(</span><span class="ss">:first</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="ss">:first</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">shifted_value</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">shift</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="ss">:first</span><span class="p">),</span> <span class="n">shifted_value</span>
+</span><span class='line'>    <span class="n">assert_equal</span> <span class="n">__</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">]</span><span class="p">),</span> <span class="n">array</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 </article>
